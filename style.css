@@ -6,6 +6,14 @@
   font-family: 'Inter', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 70px;
+}
+
 /* ROOT (LIGHT MODE DEFAULT) */
 :root {
   --bg: #f5f7fb;
@@ -60,6 +68,7 @@ body {
   width: 100%;
   z-index: 100;
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
 }
 
 .nav-row {
@@ -336,9 +345,12 @@ body {
   width: 60px;
 }
 
+.tech-box:nth-child(2) svg {
+  fill: var(--accent);
+}
 
-.tech-box div:nth-child(2) svg {
-  fill: #32e612;
+.tech-box:nth-child(5) svg {
+  fill: var(--accent-dark)
 }
 
 /**************** CONTACT ****************/
@@ -380,6 +392,7 @@ body {
 .touch-item svg {
   width: 25px;
   height: 25px;
+  fill: var(--accent)
 }
 
 .subline {
@@ -512,8 +525,9 @@ button:hover {
 .copyright {
   position: relative;
   text-align: center;
-  padding: 40px 24px;
+  padding: 20px;
   overflow: hidden;
+  border-top: 1px solid var(--border);
 }
 
 .copyright .text {
