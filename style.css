@@ -438,6 +438,10 @@ body {
   background: #333;
 }
 
+.whatsapp:hover {
+  background: #25D366;
+}
+
 .linkedin:hover {
   background: #0a66c2;
 }
