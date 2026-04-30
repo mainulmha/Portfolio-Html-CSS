@@ -35,6 +35,7 @@
         <!-- <li><a href="#" class="outline-btn">Download CV</a></li> -->
       </ul>
     </div>
+    <span id="theme-toggle">🌙</span>
   </nav>
   <!-- *************************************************  HERO SECTION ********************************************** !-->
   <section class="hero">
@@ -404,74 +405,31 @@
       });
     });
 
-    // Modal functionality
-    const modal = document.getElementById('project-modal');
-    const modalBody = document.getElementById('modal-body');
-    const closeBtn = document.querySelector('.close');
+    // থিম টগল করার জন্য
+    // থিম টগল বাটন
+    const toggleBtn = document.getElementById("theme-toggle");
 
-    const projectData = {
-      ecommerce: {
-        title: 'E-Commerce App',
-        description: 'A full-stack e-commerce application built with MERN stack. Features include user authentication, product catalog, shopping cart, payment integration, and admin panel.',
-        technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-        github: 'https://github.com/example/ecommerce',
-        demo: 'https://example.com/demo'
-      },
-      admin: {
-        title: 'Admin Dashboard',
-        description: 'A comprehensive admin dashboard for managing business operations. Includes analytics, user management, inventory tracking, and reporting features.',
-        technologies: ['React', 'Chart.js', 'Node.js', 'MongoDB'],
-        github: 'https://github.com/example/admin-dashboard',
-        demo: 'https://example.com/admin-demo'
-      },
-      expense: {
-        title: 'Expense Tracker',
-        description: 'A personal finance app to track expenses and income. Features budgeting, category management, and visual reports.',
-        technologies: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
-        github: 'https://github.com/example/expense-tracker',
-        demo: 'https://example.com/expense-demo'
-      },
-      chat: {
-        title: 'Real-time Chat',
-        description: 'A real-time chat application with WebSocket integration. Supports multiple rooms, private messaging, and file sharing.',
-        technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-        github: 'https://github.com/example/real-time-chat',
-        demo: 'https://example.com/chat-demo'
-      }
-    };
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
 
-    document.querySelectorAll('.learn-more').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const project = e.target.getAttribute('data-project');
-        const data = projectData[project];
-
-        modalBody.innerHTML = `
-          <h2>${data.title}</h2>
-          <p>${data.description}</p>
-          <h3>Technologies Used:</h3>
-          <ul>
-            ${data.technologies.map(tech => `<li>${tech}</li>`).join('')}
-          </ul>
-          <div class="modal-links">
-            <a href="${data.github}" target="_blank" class="modal-btn">View on GitHub</a>
-            <a href="${data.demo}" target="_blank" class="modal-btn">Live Demo</a>
-          </div>
-        `;
-
-        modal.style.display = 'block';
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
+      // icon change
+      if (document.body.classList.contains("dark")) {
+        toggleBtn.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+      } else {
+        toggleBtn.textContent = "🌙";
+        localStorage.setItem("theme", "light");
       }
     });
+
+    // reload করলে theme ধরে রাখবে
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark");
+      toggleBtn.textContent = "☀️";
+    }
+
+
   </script>
 </body>
 
