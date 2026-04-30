@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Mainul Hasan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="light">
+    <nav class="navbar">
+        <div class="container nav-row">
+            <div class="logo">
+                <a href="index.html"
+                    style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
+                    <span class="mern-text">MAINUL</span>
+                    <span class="stack-text">HASAN</span>
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container project-detail">
+        <div class="project-header">
+            <h1>Admin Dashboard</h1>
+            <p class="project-subtitle">A comprehensive admin panel for business analytics and management</p>
+        </div>
+
+        <div class="project-content">
+            <div class="project-images">
+                <img src="img/admin.png" alt="Admin Dashboard Screenshot" class="main-image">
+                <div class="image-gallery">
+                    <img src="img/admin.png" alt="Analytics View">
+                    <img src="img/admin.png" alt="User Management">
+                    <img src="img/admin.png" alt="Reports">
+                </div>
+            </div>
+
+            <div class="project-info">
+                <div class="info-section">
+                    <h2>Project Overview</h2>
+                    <p>This powerful admin dashboard provides business owners with comprehensive tools to manage their
+                        operations. Featuring real-time analytics, user management, inventory tracking, and detailed
+                        reporting capabilities. Built with modern React components and responsive design.</p>
+                </div>
+
+                <div class="info-section">
+                    <h2>Key Features</h2>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> Real-time analytics and KPIs</li>
+                        <li><i class="fas fa-check-circle"></i> User management and permissions</li>
+                        <li><i class="fas fa-check-circle"></i> Inventory and stock management</li>
+                        <li><i class="fas fa-check-circle"></i> Sales and revenue reports</li>
+                        <li><i class="fas fa-check-circle"></i> Data visualization with charts</li>
+                        <li><i class="fas fa-check-circle"></i> Export functionality (PDF/Excel)</li>
+                        <li><i class="fas fa-check-circle"></i> Notification system</li>
+                        <li><i class="fas fa-check-circle"></i> Multi-role access control</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h2>Technologies Used</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag react">React</span>
+                        <span class="tech-tag nodejs">Node.js</span>
+                        <span class="tech-tag mongodb">MongoDB</span>
+                        <span class="tech-tag express">Express</span>
+                        <span class="tech-tag stripe">Stripe API</span>
+                        <span class="tech-tag jwt">JWT</span>
+                        <span class="tech-tag redux">Redux</span>
+                        <span class="tech-tag material-ui">Material-UI</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2>Demo Video</h2>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            title="Admin Dashboard Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/example/admin-dashboard" target="_blank" class="project-btn primary">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="https://example-admin-demo.netlify.app" target="_blank" class="project-btn secondary">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="copyright">
+        <img src="img/bottom-left.png" class="c-left" />
+        <p class="text">© 2026 <span>MAINUL HASAN</span> | ALL RIGHTS RESERVED</p>
+        <img src="img/bottom-right.png" class="c-right" />
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

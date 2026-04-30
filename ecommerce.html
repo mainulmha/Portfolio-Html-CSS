@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce App - Mainul Hasan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="light">
+    <nav class="navbar">
+        <div class="container nav-row">
+            <div class="logo">
+                <a href="index.html"
+                    style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
+                    <span class="mern-text">MAINUL</span>
+                    <span class="stack-text">HASAN</span>
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container project-detail">
+        <div class="project-header">
+            <h1>E-Commerce App</h1>
+            <p class="project-subtitle">A full-stack e-commerce platform built with modern web technologies</p>
+        </div>
+
+        <div class="project-content">
+            <div class="project-images">
+                <img src="img/ecom.png" alt="E-Commerce App Screenshot" class="main-image">
+                <div class="image-gallery">
+                    <img src="img/ecom.png" alt="Feature 1">
+                    <img src="img/ecom.png" alt="Feature 2">
+                    <img src="img/ecom.png" alt="Feature 3">
+                </div>
+            </div>
+
+            <div class="project-info">
+                <div class="info-section">
+                    <h2>Project Overview</h2>
+                    <p>This comprehensive e-commerce application provides a complete online shopping experience with
+                        user authentication, product management, shopping cart functionality, and secure payment
+                        processing. Built using the MERN stack for optimal performance and scalability.</p>
+                </div>
+
+                <div class="info-section">
+                    <h2>Key Features</h2>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> User registration and authentication</li>
+                        <li><i class="fas fa-check-circle"></i> Product catalog with search and filtering</li>
+                        <li><i class="fas fa-check-circle"></i> Shopping cart and wishlist</li>
+                        <li><i class="fas fa-check-circle"></i> Secure payment integration (Stripe)</li>
+                        <li><i class="fas fa-check-circle"></i> Order tracking and history</li>
+                        <li><i class="fas fa-check-circle"></i> Admin dashboard for inventory management</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive design for all devices</li>
+                        <li><i class="fas fa-check-circle"></i> Real-time inventory updates</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h2>Technologies Used</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag react">React</span>
+                        <span class="tech-tag nodejs">Node.js</span>
+                        <span class="tech-tag mongodb">MongoDB</span>
+                        <span class="tech-tag express">Express</span>
+                        <span class="tech-tag stripe">Stripe API</span>
+                        <span class="tech-tag jwt">JWT</span>
+                        <span class="tech-tag redux">Redux</span>
+                        <span class="tech-tag material-ui">Material-UI</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2>Demo Video</h2>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            title="E-Commerce App Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/example/ecommerce" target="_blank" class="project-btn primary">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="https://example-ecommerce-demo.netlify.app" target="_blank" class="project-btn secondary">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="copyright">
+        <img src="img/bottom-left.png" class="c-left" />
+        <p class="text">© 2026 <span>MAINUL HASAN</span> | ALL RIGHTS RESERVED</p>
+        <img src="img/bottom-right.png" class="c-right" />
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
