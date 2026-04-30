@@ -363,8 +363,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
-  /* Increased gap for better look */
-  padding-left: 120px;
 }
 
 .left h2,
